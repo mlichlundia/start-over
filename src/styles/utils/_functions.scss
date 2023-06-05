@@ -1,0 +1,51 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
+
+@use "variables" as *;
+
+@function rem($value) {
+  @return #{math.div(to-num($value), $font-base)}rem;
+}
+
+@function get-breakpoint($value) {
+  @return map.get($breakpoints, $value);
+}
+
+@function get-breakpoint-font($value) {
+  @return map.get($breakpoint-fonts, $value);
+}
+
+@function font($value) {
+  @if list.index($fonts, $value) {
+    @return var(--font-size-#{$value});
+  } @else {
+    @warn 'This #{$value} doesn\'t exist';
+    @return var(--invalid-font-provided)
+  }
+}
+
+@function color($value) {
+  @if map.get($colors, $value) {
+    @return var(--color-#{$value});
+  } @else {
+    @warn 'This color #{$value} doesn\'t exist';
+    @return var(--invalid-color-provided)
+  }
+}
+
+@function color-hex($name) {
+  @if not map.get($colors, $name) {
+    @error '"#{$name}" is not a valid color name';
+  }
+  @return map.get($colors, $name)
+};
+
+@function to-num($value) {
+  @if type-of($value) == "number" {
+    @return $value;
+  } @else {
+    @warn 'This #{$value} shouldn\'t contain "px" in it';
+    @return 0
+  }
+}

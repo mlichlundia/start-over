@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+body {
+  height: 100vh;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+img,
+svg {
+  width: 100%;
+  display: block;
+}
+
+button,
+select,
+a {
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+hr {
+  display: block;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar:horizontal {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 0;
+}

@@ -1,0 +1,47 @@
+$font-base: 16;
+$fonts: (64, 40, 24, 20, 18, 16, 14);
+
+$colors: (
+  "white": #fff,
+  "black": #000,
+  neutral-200: #3f3a51,
+  neutral-300: #676773,
+  neutral-400: #9c99a4,
+  neutral-600: #c1c1ce,
+  neutral-700: #ededf1,
+  neutral-800: #fcfcfe,
+  neutral-900: #f7f7fb,
+  accent-800: #f2397c,
+  accent-900: #e52a6e,
+  bg: var(--color-neutral-900),
+  text: var(--color-neutral-200),
+);
+
+$dark-colors: (
+  neutral-300: #cecbd6,
+  neutral-400: #a19dac,
+  neutral-600: #6b667a,
+  neutral-700: #2f2c3a,
+  neutral-800: #1f1d2b,
+  neutral-900: #171422,
+  bg: var(--color-neutral-900),
+  text: var(--color-white),
+);
+
+$breakpoints: (
+  xs: 482px,
+  sm: 640px,
+  md: 992px,
+  lg: 1280px,
+  xl: 1680px,
+  xxl: 1920px,
+);
+
+$breakpoint-fonts: (
+  xs: 3.31950207vw,
+  s: 2.5vw,
+  m: 1.61290332vw,
+  l: 1.25vw,
+  xl: 0.95238095vw,
+  xxl: 0.83333333vw,
+);

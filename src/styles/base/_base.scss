@@ -1,0 +1,27 @@
+@use "../utils/_mixins.scss" as *;
+@use "../utils/_functions.scss" as *;
+
+html {
+  @include generate-fonts;
+  @include generate-colors;
+  @include generate-breakpoints;
+}
+
+.theme-dark {
+  @include generate-dark-colors;
+}
+
+body {
+  color: color(bg);
+  background: color(bg);
+  font-family: "Retni Sans", Arial, sans-serif;
+}
+
+* {
+  color: color(text);
+}
+
+::selection {
+  color: color("white");
+  background: color(accent-900);
+}
