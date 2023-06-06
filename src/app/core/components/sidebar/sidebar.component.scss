@@ -1,0 +1,52 @@
+@use "src/styles/styles" as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: color(menu-text);
+  cursor: pointer;
+  pointer-events: none;
+  transition: transform .15s ease-in-out, background .15s ease-in-out;
+
+  @include lg {
+    position: static;
+    width: fit-content;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    padding: rem(24);
+    background: color(menu-bg);
+    cursor: default;
+    transform: translate(100%);
+    transition: transform .15s ease-in-out;
+
+    @include sm {
+      width: rem(400);
+    }
+
+    @include lg {
+      width: fit-content;
+      border-radius: rem(20);
+      transform: none;
+    }
+  }
+
+  &.active {
+    background: rgba(color-hex("black"), .2);
+    backdrop-filter: blur(rem(4));
+    pointer-events: all;
+
+    @include lg {
+      background: none;
+    }
+
+    .sidebar__content {
+      transform: none;
+    }
+  }
+}

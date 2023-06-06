@@ -1,0 +1,20 @@
+@use "src/styles/styles" as *;
+
+:host {
+  display: flex;
+  height: 100%;
+
+  @include lg {
+    height: 100vh;
+    padding: rem(16) rem(16);
+    overflow: hidden;
+  }
+}
+
+main {
+  padding: rem(64) rem(32);
+
+  @include sm {
+    padding: rem(64) rem(64);
+  }
+}

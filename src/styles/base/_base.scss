@@ -18,6 +18,11 @@ body {
   font-family: "Retni Sans", Arial, sans-serif;
 }
 
+body.prevent-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 * {
   color: color(text);
 }

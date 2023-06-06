@@ -1,0 +1,7 @@
+<app-sidebar-button (click)="toggleMenu()" [class]="{active: isOpen}"></app-sidebar-button>
+
+<div class="sidebar" [class]="{active: isOpen}" (click)="closeMenu()">
+  <div class="sidebar__content" (click)="$event.stopPropagation()">
+    <app-menu></app-menu>
+  </div>
+</div>

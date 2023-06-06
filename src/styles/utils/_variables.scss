@@ -15,6 +15,9 @@ $colors: (
   accent-900: #e52a6e,
   bg: var(--color-neutral-900),
   text: var(--color-neutral-200),
+  menu-bg: var(--color-neutral-800),
+  menu-text: var(--color-neutral-300)
+
 );
 
 $dark-colors: (
@@ -26,6 +29,8 @@ $dark-colors: (
   neutral-900: #171422,
   bg: var(--color-neutral-900),
   text: var(--color-white),
+  menu-bg: var(--color-neutral-700),
+  menu-text: var(--color-neutral-300)
 );
 
 $breakpoints: (
@@ -35,13 +40,4 @@ $breakpoints: (
   lg: 1280px,
   xl: 1680px,
   xxl: 1920px,
-);
-
-$breakpoint-fonts: (
-  xs: 3.31950207vw,
-  s: 2.5vw,
-  m: 1.61290332vw,
-  l: 1.25vw,
-  xl: 0.95238095vw,
-  xxl: 0.83333333vw,
 );

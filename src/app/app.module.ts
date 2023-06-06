@@ -5,11 +5,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ServiceWorkerModule } from '@angular/service-worker'
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
+import { SidebarComponent } from './core/components/sidebar/sidebar.component';
+import { MenuComponent } from './core/components/sidebar/menu/menu.component';
+import { SidebarButtonComponent } from './core/components/sidebar/sidebar-button/sidebar-button.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidebarComponent,
+    MenuComponent,
+    SidebarButtonComponent
   ],
   imports: [
     BrowserModule,
