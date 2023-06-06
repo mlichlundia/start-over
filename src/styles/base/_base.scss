@@ -5,6 +5,7 @@ html {
   @include generate-fonts;
   @include generate-colors;
   @include generate-breakpoints;
+  @include screen-width;
 }
 
 .theme-dark {

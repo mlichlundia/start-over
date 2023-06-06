@@ -12,10 +12,6 @@
   @return map.get($breakpoints, $value);
 }
 
-@function get-breakpoint-font($value) {
-  @return map.get($breakpoint-fonts, $value);
-}
-
 @function font($value) {
   @if list.index($fonts, $value) {
     @return var(--font-size-#{$value});

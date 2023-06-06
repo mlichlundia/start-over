@@ -22,7 +22,6 @@
 @mixin generate-breakpoints() {
   @each $key, $value in $breakpoints {
     --breakpoint-#{$key}: #{$value};
-    font-size: get-breakpoint-font($key);
   }
 }
 
@@ -59,5 +58,29 @@
 @mixin xl {
   @media screen and (min-width: get-breakpoint(xxl)) {
     @content;
+  }
+}
+
+@mixin screen-width {
+  font-size: 3.31950207vw;
+
+  @media screen and (min-width: get-breakpoint(sm)) {
+    font-size: 2.5vw;
+  }
+
+  @media screen and (min-width: get-breakpoint(md)) {
+    font-size: 1.61290332vw;
+  }
+
+  @media screen and (min-width: get-breakpoint(lg)) {
+    font-size: 1.25vw;
+  }
+
+  @media screen and (min-width: get-breakpoint(xl)) {
+    font-size: 0.95238095vw;
+  }
+
+  @media screen and (min-width: get-breakpoint(xxl)) {
+    font-size: 0.8333333333333vw;
   }
 }
